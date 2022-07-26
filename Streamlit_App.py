@@ -1,5 +1,7 @@
 import streamlit as st
 import cv2
+from PIL import Image
+import numpy as np
 
 def render_header():
     st.write("""
@@ -18,13 +20,12 @@ def main():
         st.header("Detect and Extract Text From Images")
         st.markdown("""
         **Now, this is probably why you came here. Let's get you some Predictions**
-        Upload your Image
         """)
         st.header("Upload Your Image")
-        file_path = st.file_uploader('Upload an image', type=['png', 'jpg'])
+        file_path = st.file_uploader(type=['png', 'jpg'])
 
         if file_path is not None:
-            img = cv2.imread(file_path)
+            img = Image.open(file_path)
             st.success('File Upload Success!')
         else:
             st.info('Please upload Image file')
