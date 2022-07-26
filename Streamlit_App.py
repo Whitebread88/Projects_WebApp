@@ -1,6 +1,4 @@
 import streamlit as st
-from PIL import Image
-import cv2
 from pytesseract import pytesseract
 
 def render_header():
