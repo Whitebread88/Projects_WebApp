@@ -14,7 +14,7 @@ def main():
     st.sidebar.subheader('Choose a page to proceed:')
     page = st.sidebar.selectbox("", ["Image Analysis", "Sentiment Analysis", "Emotion Analysis"])
 
-    if page == "Text Detection":
+    if page == "Image Analysis":
         st.header("Detect and Extract Text From Images")
         st.markdown("""
         **Now, this is probably why you came here. Let's get you some Predictions**
